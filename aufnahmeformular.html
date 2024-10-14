@@ -1,36 +1,171 @@
 <!DOCTYPE html>
 <!-- saved from url=(0022)http://localhost:4200/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
   <title></title>
-  <!--<base href="/">--><base href=".">
+  <!--<base href="/">-->
+  <base href=".">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="http://localhost:4200/favicon.ico">
-<link rel="stylesheet" href="./localhost_files/styles.css"><style>
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */</style><style>#application-form[_ngcontent-dcu-c1]   input[_ngcontent-dcu-c1]:not([type=checkbox])     .mat-checkbox-inner-container {width: 30px;height: 30px;}
+  <link rel="stylesheet" href="./localhost_files/styles.css">
+  <style>
+    /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */
+  </style>
+  <style>
+    #application-form[_ngcontent-dcu-c1] input[_ngcontent-dcu-c1]:not([type=checkbox]) .mat-checkbox-inner-container {
+      width: 30px;
+      height: 30px;
+    }
 
-.heading[_ngcontent-dcu-c1]{
-  text-align: center;
-}
+    .heading[_ngcontent-dcu-c1] {
+      text-align: center;
+    }
 
-.btn[_ngcontent-dcu-c1]{
-    margin-top: 2%;
-}
+    .btn[_ngcontent-dcu-c1] {
+      margin-top: 2%;
+    }
 
-div[_ngcontent-dcu-c1] {
-    margin-bottom: 20px; 
-}
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY29tcG9uZW50cy90ZW1wbGF0ZS1kcml2ZW4tZm9ybS90ZW1wbGF0ZS1kcml2ZW4tZm9ybS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztzREFFc0QsV0FBVyxDQUFDLFlBQVksQ0FBQzs7QUFFL0U7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksbUJBQW1CLEVBQUUsdUJBQXVCO0FBQ2hEIiwic291cmNlc0NvbnRlbnQiOlsiI2FwcGxpY2F0aW9uLWZvcm0gaW5wdXQ6bm90KFt0eXBlPWNoZWNrYm94XSlcclxuXHJcbm1hdC1jaGVja2JveCA6Om5nLWRlZXAgLm1hdC1jaGVja2JveC1pbm5lci1jb250YWluZXIge3dpZHRoOiAzMHB4O2hlaWdodDogMzBweDt9XHJcblxyXG4uaGVhZGluZ3tcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5idG57XHJcbiAgICBtYXJnaW4tdG9wOiAyJTtcclxufVxyXG5cclxuZGl2IHtcclxuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7IC8qIEFic3RhbmQgbmFjaCB1bnRlbiAqL1xyXG59XHJcblxyXG4iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+    div[_ngcontent-dcu-c1] {
+      margin-bottom: 20px;
+    }
+
+    /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY29tcG9uZW50cy90ZW1wbGF0ZS1kcml2ZW4tZm9ybS90ZW1wbGF0ZS1kcml2ZW4tZm9ybS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztzREFFc0QsV0FBVyxDQUFDLFlBQVksQ0FBQzs7QUFFL0U7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksbUJBQW1CLEVBQUUsdUJBQXVCO0FBQ2hEIiwic291cmNlc0NvbnRlbnQiOlsiI2FwcGxpY2F0aW9uLWZvcm0gaW5wdXQ6bm90KFt0eXBlPWNoZWNrYm94XSlcclxuXHJcbm1hdC1jaGVja2JveCA6Om5nLWRlZXAgLm1hdC1jaGVja2JveC1pbm5lci1jb250YWluZXIge3dpZHRoOiAzMHB4O2hlaWdodDogMzBweDt9XHJcblxyXG4uaGVhZGluZ3tcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5idG57XHJcbiAgICBtYXJnaW4tdG9wOiAyJTtcclxufVxyXG5cclxuZGl2IHtcclxuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7IC8qIEFic3RhbmQgbmFjaCB1bnRlbiAqL1xyXG59XHJcblxyXG4iXSwic291cmNlUm9vdCI6IiJ9 */
+  </style>
+</head>
+
 <body>
-  <app-root _nghost-dcu-c3="" ng-version="15.2.9"><nav _ngcontent-dcu-c3="" class="navbar navbar-expand-lg navbar-light bg-light"><a _ngcontent-dcu-c3="" href="http://localhost:4200/#" class="navbar-brand">Formulare</a><button _ngcontent-dcu-c3="" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span _ngcontent-dcu-c3="" class="navbar-toggler-icon"></span></button><div _ngcontent-dcu-c3="" id="navbarNav" class="collapse navbar-collapse"><ul _ngcontent-dcu-c3="" class="navbar-nav"><li _ngcontent-dcu-c3="" class="nav-item"><a _ngcontent-dcu-c3="" routerlink="/template-driven" class="nav-link" ng-reflect-router-link="/template-driven" href="http://localhost:4200/template-driven">Aufnameformular</a></li><li _ngcontent-dcu-c3="" class="nav-item"><a _ngcontent-dcu-c3="" routerlink="/reactive-form" class="nav-link" ng-reflect-router-link="/reactive-form" href="http://localhost:4200/reactive-form"></a></li></ul></div></nav><router-outlet _ngcontent-dcu-c3=""></router-outlet><app-template-driven-form _nghost-dcu-c1=""><div _ngcontent-dcu-c1="" class="container"><h2 _ngcontent-dcu-c1="" class="heading">Aufnahmeformular</h2><form _ngcontent-dcu-c1="" novalidate=""><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="name">Name</label><input _ngcontent-dcu-c1="" type="text" id="name" name="name" required="" class="form-control" ng-reflect-required="" ng-reflect-name="name" ng-reflect-model=""><!--bindings={
+  <app-root _nghost-dcu-c3="" ng-version="15.2.9">
+    <nav _ngcontent-dcu-c3="" class="navbar navbar-expand-lg navbar-light bg-light"><a _ngcontent-dcu-c3=""
+        href="http://localhost:4200/#" class="navbar-brand">Formulare</a><button _ngcontent-dcu-c3="" type="button"
+        data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation" class="navbar-toggler"><span _ngcontent-dcu-c3=""
+          class="navbar-toggler-icon"></span></button>
+      <div _ngcontent-dcu-c3="" id="navbarNav" class="collapse navbar-collapse">
+        <ul _ngcontent-dcu-c3="" class="navbar-nav">
+          <li _ngcontent-dcu-c3="" class="nav-item"><a _ngcontent-dcu-c3="" routerlink="/template-driven"
+              class="nav-link" ng-reflect-router-link="/template-driven"
+              href="http://localhost:4200/template-driven">Aufnameformular</a></li>
+          <li _ngcontent-dcu-c3="" class="nav-item"><a _ngcontent-dcu-c3="" routerlink="/reactive-form" class="nav-link"
+              ng-reflect-router-link="/reactive-form" href="http://localhost:4200/reactive-form"></a></li>
+        </ul>
+      </div>
+    </nav><router-outlet _ngcontent-dcu-c3=""></router-outlet><app-template-driven-form _nghost-dcu-c1="">
+      <div _ngcontent-dcu-c1="" class="container">
+        <h2 _ngcontent-dcu-c1="" class="heading">Aufnahmeformular</h2>
+        <form _ngcontent-dcu-c1="" novalidate="">
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="name">Name, Vorname</label><input
+              _ngcontent-dcu-c1="" type="text" id="name" name="name" required="" class="form-control"
+              ng-reflect-required="" ng-reflect-name="name" ng-reflect-model=""><!--bindings={
   "ng-reflect-ng-if": "false"
-}--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="vorname"> Vorname</label><input _ngcontent-dcu-c1="" type="text" id="vorname" name="vorname" required="" class="form-control" ng-reflect-required="" ng-reflect-name="vorname" ng-reflect-model=""></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="strasse">Strasse</label><input _ngcontent-dcu-c1="" type="text" id="strasse" strasse="strasse" required="" class="form-control" ng-reflect-required="" ng-reflect-model=""><!--bindings={
-  "ng-reflect-ng-if": null
-}--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="nr">Nr.</label><input _ngcontent-dcu-c1="" type="text" id="nr" nr="nr" required="" class="form-control" ng-reflect-required="" ng-reflect-model=""><!--bindings={
-  "ng-reflect-ng-if": null
-}--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="plz">PLZ</label><input _ngcontent-dcu-c1="" type="text" id="plz" plz="plz" required="" class="form-control" ng-reflect-required="" ng-reflect-model=""><!--bindings={
-  "ng-reflect-ng-if": null
-}--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="ort">Ort</label><input _ngcontent-dcu-c1="" type="text" id="ort" ort="ort" required="" class="form-control" ng-reflect-required="" ng-reflect-model=""><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="telefon">Telefon</label><input _ngcontent-dcu-c1="" type="tel" id="telefon" telefon="telefon" required="" class="form-control" ng-reflect-required=""><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="telegram">Telegram</label><input _ngcontent-dcu-c1="" type="telegram" id="telegram" name="telegram" required="" class="form-control" ng-reflect-required="" ng-reflect-name="telegram"><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1=""> Bist du selbst betroffen? <input _ngcontent-dcu-c1="" type="checkbox" id="personally_affected" name="personally_affected" ng-reflect-name="personally_affected"></label></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="relation">Falls Nein, in welchem Zusammenhang stehst du mit dem Betroffenem?</label><input _ngcontent-dcu-c1="" type="text" id="relation" name="relation" required="" class="form-control" ng-reflect-required="" ng-reflect-name="relation"><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="description">Was ist passiert? (Schildere ganz kurz deinen Fall in höchstens 1000 Zeichen)</label><input _ngcontent-dcu-c1="" type="text" id="description" name="description" required="" pattern="[0-9]{10}" class="form-control" ng-reflect-required="" ng-reflect-pattern="[0-9]{10}" ng-reflect-name="description"><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="kesb">Zuständige KESB:</label><input _ngcontent-dcu-c1="" type="text" id="kesb" name="kesb" required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-name="kesb"><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1=""> Wurde eine Beistandschaft errichtet? <input _ngcontent-dcu-c1="" type="checkbox" formcontrolname="agree" ng-reflect-name="agree"></label></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="beistand"> Falls Ja, Name Beistand:</label><input _ngcontent-dcu-c1="" type="text" id="beistand" name="case_mgr" required="" pattern="[0-9]{10}" class="form-control" ng-reflect-required="" ng-reflect-pattern="[0-9]{10}" ng-reflect-name="case_mgr"><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="stakeholder1">Weitere Involvierte Stellen wie Heim, Pflegeeltern, Familienbegleiter, etc.</label><br _ngcontent-dcu-c1=""><input _ngcontent-dcu-c1="" type="text" id="stakeholder1" name="stakeholder1" required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-name="stakeholder1"><!--container--><label _ngcontent-dcu-c1="" for="stakeholder2"></label><input _ngcontent-dcu-c1="" type="number" id="stakeholder2" name="stakeholder2" required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20" ng-reflect-max="60" ng-reflect-name="stakeholder2"><!--container--><label _ngcontent-dcu-c1="" for="stakeholder3"></label><input _ngcontent-dcu-c1="" type="number" id="stakeholder3" name="stakeholder3" required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20" ng-reflect-max="60" ng-reflect-name="stakeholder3"><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="worst_experience">Was ist das Schlimmste an der Massnahme? </label><input _ngcontent-dcu-c1="" type="number" id="worst_experience" name="worst_experience" required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20" ng-reflect-max="60" ng-reflect-name="worst_experience"><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="goal">Was willst du erreichen?</label><input _ngcontent-dcu-c1="" type="number" id="goal" name="goal" required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20" ng-reflect-max="60" ng-reflect-name="goal"><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="wellmeaning_ind">Gibt es dir wohlgesinnte Menschen, die involviert sind?</label><input _ngcontent-dcu-c1="" type="text" id="wellmeaning_ind" name="goal" required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-name="goal"><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1=""> Bist du interessiert Mitglied unseres Vereins zu werden? <input _ngcontent-dcu-c1="" type="checkbox" formcontrolname="membership" ng-reflect-name="membership"></label></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="skills">Hast du bestimmte Fähigkeiten?</label><input _ngcontent-dcu-c1="" type="number" id="skills" name="skills" required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20" ng-reflect-max="60" ng-reflect-name="skills"><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="contribution">Kannst du etwas im Verein beitragen?</label><input _ngcontent-dcu-c1="" type="number" id="contribution" name="contribution" required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20" ng-reflect-max="60" ng-reflect-name="contribution"><!--container--><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="suggestions_kesb">Was würdest du an der KESB ändern?</label><input _ngcontent-dcu-c1="" type="number" id="suggestions_kesb" name="suggestions_kesb" required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20" ng-reflect-max="60" ng-reflect-name="suggestions_kesb"><!--container--></div><div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="notes">Hast du sonst noch etwas anzumerken?</label><input _ngcontent-dcu-c1="" type="number" id="notes" name="notes" required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20" ng-reflect-max="60" ng-reflect-name="notes"><!--container--></div></div><button _ngcontent-dcu-c1="" type="submit" class="btn btn-primary">Submit</button></form></div></app-template-driven-form><!--container--></app-root>
-<script src="./localhost_files/runtime.js.download" type="module"></script><script src="./localhost_files/polyfills.js.download" type="module"></script><script src="./localhost_files/styles.js.download" defer=""></script><script src="./localhost_files/scripts.js.download" defer=""></script><script src="./localhost_files/vendor.js.download" type="module"></script><script src="./localhost_files/main.js.download" type="module"></script>
+}--></div>
 
-</body></html>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="strasse">Strasse, Nr.</label><input
+              _ngcontent-dcu-c1="" type="text" id="strasse" strasse="strasse" required="" class="form-control"
+              ng-reflect-required="" ng-reflect-model=""><!--bindings={
+  "ng-reflect-ng-if": null
+}--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="plz">PLZ</label><input
+              _ngcontent-dcu-c1="" type="text" id="plz" plz="plz" required="" class="form-control"
+              ng-reflect-required="" ng-reflect-model=""><!--bindings={
+  "ng-reflect-ng-if": null
+}--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="ort">Ort</label><input
+              _ngcontent-dcu-c1="" type="text" id="ort" ort="ort" required="" class="form-control"
+              ng-reflect-required="" ng-reflect-model=""><!--container--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="telefon">Telefon</label><input
+              _ngcontent-dcu-c1="" type="tel" id="telefon" telefon="telefon" required="" class="form-control"
+              ng-reflect-required=""><!--container--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="telegram">Telegram</label><input
+              _ngcontent-dcu-c1="" type="telegram" id="telegram" name="telegram" required="" class="form-control"
+              ng-reflect-required="" ng-reflect-name="telegram"><!--container--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1=""> Bist du selbst betroffen? &nbsp;&nbsp;&nbsp;    Ja <input
+                _ngcontent-dcu-c1="" type="checkbox" id="personally_affected" name="personally_affected"
+                ng-reflect-name="personally_affected"></label></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="relation">Falls Nein, in welchem
+              Zusammenhang stehst du mit dem Betroffenem?</label><input _ngcontent-dcu-c1="" type="text" id="relation"
+              name="relation" required="" class="form-control" ng-reflect-required=""
+              ng-reflect-name="relation"><!--container--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="description">Was ist passiert?
+              (Schildere ganz kurz deinen Fall in höchstens 1000 Zeichen)</label>
+            
+              <textarea 
+              id="description" 
+              name="description" 
+              required 
+              pattern="[0-9]{10}" 
+              class="form-control" 
+              rows="5"
+              ng-reflect-required="" 
+              ng-reflect-pattern="[0-9]{10}" 
+              ng-reflect-name="description">
+            </textarea>
+            </div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="kesb">Zuständige
+              KESB:</label><input _ngcontent-dcu-c1="" type="text" id="kesb" name="kesb" required="" min="20" max="60"
+              class="form-control" ng-reflect-required="" ng-reflect-name="kesb"><!--container--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1=""> Wurde eine Beistandschaft errichtet? &nbsp;&nbsp;&nbsp;   Ja
+              <input _ngcontent-dcu-c1="" type="checkbox" formcontrolname="agree" ng-reflect-name="agree"></label></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="beistand"> Falls Ja, Name
+              Beistand:</label><input _ngcontent-dcu-c1="" type="text" id="beistand" name="case_mgr" required=""
+              pattern="[0-9]{10}" class="form-control" ng-reflect-required="" ng-reflect-pattern="[0-9]{10}"
+              ng-reflect-name="case_mgr"><!--container--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="stakeholder1">Weitere
+              Involvierte Stellen wie Heim, Pflegeeltern, Familienbegleiter, etc.</label><br _ngcontent-dcu-c1=""><input
+              _ngcontent-dcu-c1="" type="text" id="stakeholder1" name="stakeholder1" required="" min="20" max="60"
+              class="form-control" ng-reflect-required="" ng-reflect-name="stakeholder1"><!--container--><label
+              _ngcontent-dcu-c1="" for="stakeholder2"></label><input _ngcontent-dcu-c1="" type="number"
+              id="stakeholder2" name="stakeholder2" required="" min="20" max="60" class="form-control"
+              ng-reflect-required="" ng-reflect-min="20" ng-reflect-max="60"
+              ng-reflect-name="stakeholder2"><!--container--><label _ngcontent-dcu-c1=""
+              for="stakeholder3"></label><input _ngcontent-dcu-c1="" type="number" id="stakeholder3" name="stakeholder3"
+              required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20"
+              ng-reflect-max="60" ng-reflect-name="stakeholder3"><!--container--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="worst_experience">Was ist das
+              Schlimmste an der Massnahme? </label><input _ngcontent-dcu-c1="" type="number" id="worst_experience"
+              name="worst_experience" required="" min="20" max="60" class="form-control" ng-reflect-required=""
+              ng-reflect-min="20" ng-reflect-max="60" ng-reflect-name="worst_experience"><!--container--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="goal">Was willst du
+              erreichen?</label><input _ngcontent-dcu-c1="" type="number" id="goal" name="goal" required="" min="20"
+              max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20" ng-reflect-max="60"
+              ng-reflect-name="goal"><!--container--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="wellmeaning_ind">Gibt es dir
+              wohlgesinnte Menschen, die involviert sind?</label><input _ngcontent-dcu-c1="" type="text"
+              id="wellmeaning_ind" name="goal" required="" min="20" max="60" class="form-control" ng-reflect-required=""
+              ng-reflect-name="goal"><!--container--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1=""> Bist du interessiert Mitglied
+              unseres Vereins zu werden? &nbsp;&nbsp;&nbsp; Ja <input _ngcontent-dcu-c1="" type="checkbox" formcontrolname="membership"
+                ng-reflect-name="membership"></label></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="skills">Hast du bestimmte
+              Fähigkeiten?</label><input _ngcontent-dcu-c1="" type="number" id="skills" name="skills" required=""
+              min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20" ng-reflect-max="60"
+              ng-reflect-name="skills"><!--container--></div>
+          <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="contribution">Kannst du etwas im
+              Verein beitragen?</label><input _ngcontent-dcu-c1="" type="number" id="contribution" name="contribution"
+              required="" min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20"
+              ng-reflect-max="60" ng-reflect-name="contribution"><!--container-->
+            <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="suggestions_kesb">Was würdest
+                du an der KESB ändern?</label><input _ngcontent-dcu-c1="" type="number" id="suggestions_kesb"
+                name="suggestions_kesb" required="" min="20" max="60" class="form-control" ng-reflect-required=""
+                ng-reflect-min="20" ng-reflect-max="60" ng-reflect-name="suggestions_kesb"><!--container--></div>
+            <div _ngcontent-dcu-c1="" class="form-group"><label _ngcontent-dcu-c1="" for="notes">Hast du sonst noch
+                etwas anzumerken?</label><input _ngcontent-dcu-c1="" type="number" id="notes" name="notes" required=""
+                min="20" max="60" class="form-control" ng-reflect-required="" ng-reflect-min="20" ng-reflect-max="60"
+                ng-reflect-name="notes"><!--container--></div>
+          </div><button _ngcontent-dcu-c1="" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </app-template-driven-form><!--container-->
+  </app-root>
+  <script src="./localhost_files/runtime.js.download" type="module"></script>
+  <script src="./localhost_files/polyfills.js.download" type="module"></script>
+  <script src="./localhost_files/styles.js.download" defer=""></script>
+  <script src="./localhost_files/scripts.js.download" defer=""></script>
+  <script src="./localhost_files/vendor.js.download" type="module"></script>
+  <script src="./localhost_files/main.js.download" type="module"></script>
+
+</body>
+
+</html>
